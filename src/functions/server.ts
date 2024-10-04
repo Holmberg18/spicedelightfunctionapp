@@ -22,7 +22,7 @@ export async function server(request: HttpRequest, context: InvocationContext): 
     context.log(`Http function processed request for url "${request.url}"`);
 
     const name = request.query.get('name') || await request.text() || 'world';
-    callApiManagement()
+    // await callApiManagement()
 
     return { body: `Hello, ${name}!` };
 };
